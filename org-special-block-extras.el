@@ -1356,7 +1356,7 @@ Precise details for each argument are shown in the Emacs tooltip for this badge.
            ("here" (format "<a id=\"%s\" href=\"#%s\">%%s</a>" (s-replace "%" "%%" key) (s-replace "%" "%%" key)))
            (""      "%s") ;; e.g., badge:key|value|color||logo
            ('nil    "%s") ;; e.g., badge:key|value|color
-           (t (format "<a href=\"%s\">%%s</a>"
+           (_ (format "<a href=\"%s\">%%s</a>"
                       (s-replace "%" "%%"
                                  ,(if social-shields-name
                                       `(format ,social-url o-label)
